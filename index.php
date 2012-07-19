@@ -7,7 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="css/global.css">
 	</head>
 	<body>
-		<div id="fb-root"></div>
 		<div id="wrapper">
 			<header>
 				<a href="/" title="Return to the homepage" id="logo">
