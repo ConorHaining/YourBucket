@@ -1,5 +1,5 @@
 <?php
-require '../global.php';
+require '../database.php';
 
 //Connection Error Function
 function connect_error($reason){
@@ -38,27 +38,26 @@ if(isset($_GET['code'])){
        . "client_id=" . $app_id . "&redirect_uri=" . urlencode($app_return)
        . "&client_secret=" . $app_secret . "&code=" . $user_code;
 
-		$response = file_get_contents($token_url);
+		$token = file_get_contents($token_url);
 	    $params = null;
-	    parse_str($response, $params);
+	    parse_str($token, $params);
 
 	    $graph_url = "https://graph.facebook.com/me?access_token=" 
 	      . $params['access_token'];
 
 	    $user = json_decode(file_get_contents($graph_url));
 
-	    mysql_query("INSERT INTO user ('fb_id', 'email', 'token') values('".$user->id."', '".$user->email."', '".$response."')");
-
 	    //Add into Database if not already there
-	 //    $q = mysql_query("SELECT * FROM user WHERE fb_id=".$user->id."");
+	    $q = mysql_query("SELECT * FROM user WHERE fb_id=".$user->id."");
 
-	 //    mysql_query("INSERT INTO user ('fb_id', 'email', 'token') values('".$user->id."', '".$user->email."', '".$response."')");
-
-		// while($row = mysql_fetch_array($q)){
-		// 	if($row['fb_id'] != $user->id){
-		// 		mysql_query("INSERT INTO user ('fb_id', 'email', 'token') values('".$user->id."', '".$user->email."', '".$response."')");
-		// 	}
-		// }
+		if(mysql_num_rows($q) == 0){
+			mysql_query("INSERT INTO user (fb_id, email) VALUES ('".$user->id."', '".$user->email."')");
+		}
+		
+		// Update Token and fire user to the dashboard
+		mysql_query("UPDATE user SET token='".$token."' WHERE fb_id='".$user->id."'");
+		$_SESSION['fb_id'] = $user->id;
+		header("Location: ../dashboard");
 
 	}else{
 		connect_error("state");
@@ -106,6 +105,7 @@ if(isset($_GET['code'])){
 		<?php else: ?>
 		<div class="message">
 			Loading...
+			<!-- Maybe have a spinner? -->
 		</div>
 		<?php endif; ?>
 	</div>
