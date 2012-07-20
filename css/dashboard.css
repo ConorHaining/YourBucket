@@ -1,0 +1,43 @@
+section.dashboard{
+	height: 100%;
+	background: green;
+	width: 70%;
+	float: left;
+	margin: 10px 0;
+}
+aside.sidebar{
+	height: 100px;
+	background: red;
+	width: 29%;
+	float: right;
+	margin: 10px 0 10px 10px;	
+}
+
+.add-bucket-popup{
+	height: 100%;
+	width: 400px;
+	background: yellow;
+}
+
+.datalist {
+	list-style: none;
+	display: none;
+	background: white;
+	box-shadow: 0 2px 2px #999;
+	position: absolute;
+	left: 0;
+	top: 0;
+	max-height: 300px;
+	overflow-y: auto;
+}
+.datalist:empty {
+	display: none !important;
+}
+.datalist li {
+	padding: 3px;
+	font: 13px "Lucida Grande", Sans-Serif;
+}
+.datalist li.active {
+	background: #3875d7;
+	color: white;
+}
