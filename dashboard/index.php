@@ -48,7 +48,6 @@ fclose($handle);
 $json = json_decode($contents, true);
 
 $i = 1;
-
 // Get user's friends
 $friends = file_get_contents("https://graph.facebook.com/".$id."/friends?".$user_db['token']);
 $friends = json_decode($friends, true);
@@ -74,8 +73,8 @@ $friends = json_decode($friends, true);
 			<label for="title">Who with?: </label>
 			<input class="datalist-input" type="text" list="fb_friends">
 			<datalist id="fb_friends">
-				<?php foreach($friends as $f) : ?>
-					<option value="<?php echo $f; ?>"></option>
+				<?php foreach($friends['data'] as $f) : ?>
+					<option><?php echo $f['name']; ?></option>
 				<?php endforeach; ?>
 			</datalist>
 			<label for="title">Before I'm: </label>
