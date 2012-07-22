@@ -74,7 +74,7 @@ $friends = json_decode($friends, true);
 			<input class="datalist-input" type="text" list="fb_friends">
 			<datalist id="fb_friends">
 				<?php foreach($friends['data'] as $f) : ?>
-					<option><?php echo $f['name']; ?></option>
+					<option data-fb_id="<?php echo $f['id']; ?>" value="<?php echo $f['name']; ?>"></option>
 				<?php endforeach; ?>
 			</datalist>
 			<label for="title">Before I'm: </label>
