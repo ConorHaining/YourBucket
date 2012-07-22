@@ -44,7 +44,8 @@
         temp_item = $("<li />", {
 				// .val is required here, not .text or .html
 				// HTML *needs* to be <option value="xxx"> not <option>xxx</option>  (IE)
-          "text": $(this).val()   
+          "text": $(this).val(),
+          "fb_id": $(this).data('fb_id')
         })[0];
         temp_items.appendChild(temp_item);
       });
@@ -173,6 +174,7 @@
         var active = $("li.active");
         if (active.length) {
           $input.val($(this).text());
+          $input.data($(this).data('fb_id'));
         }
         $datalist.fadeOut(options.fadeOutSpeed);
         datalistItems.removeClass("active");
