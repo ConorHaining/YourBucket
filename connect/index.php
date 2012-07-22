@@ -52,6 +52,8 @@ if(isset($_GET['code'])){
 
 		if(mysql_num_rows($q) == 0){
 			mysql_query("INSERT INTO user (fb_id, email) VALUES ('".$user->id."', '".$user->email."')");
+			// Create User's bucket datafile
+			fopen("../dashboard/data/".$user->id.".json", "w");
 		}
 		
 		// Update Token and fire user to the dashboard
