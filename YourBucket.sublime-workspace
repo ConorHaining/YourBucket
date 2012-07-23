@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fo",
+				"fopen"
+			],
+			[
 				"jso",
 				"json"
 			],
@@ -75,15 +79,7 @@
 			"file": "dashboard/index.php",
 			"settings":
 			{
-				"buffer_size": 3065,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/datalist-plugin.js",
-			"settings":
-			{
-				"buffer_size": 5948,
+				"buffer_size": 3229,
 				"line_ending": "Windows"
 			}
 		},
@@ -91,7 +87,7 @@
 			"file": "js/bucket.js",
 			"settings":
 			{
-				"buffer_size": 160,
+				"buffer_size": 1005,
 				"line_ending": "Windows"
 			}
 		},
@@ -200,12 +196,14 @@
 	},
 	"file_history":
 	[
-		"/C/wamp/www/YourBucket/js/datalist-fallback.js",
 		"/C/wamp/www/YourBucket/js/datalist-plugin.js",
+		"/C/wamp/www/YourBucket/connect/index.php",
+		"/C/wamp/www/index.php",
+		"/C/Users/user/Links/www.lnk",
+		"/C/wamp/www/YourBucket/js/datalist-fallback.js",
 		"/C/wamp/www/YourBucket/dashboard/datalist-fallback.js",
 		"/C/wamp/www/YourBucket/dashboard/datalist-plugin.js",
 		"/C/wamp/www/YourBucket/js/modernizr.custom.95508.js",
-		"/C/wamp/www/YourBucket/connect/index.php",
 		"/C/wamp/www/YourBucket/dashboard/1815005076.json",
 		"/C/wamp/www/YourBucket/.gitignore",
 		"/C/wamp/www/YourBucket/index.php",
@@ -238,6 +236,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$input",
 			"; ",
 			"delete",
 			"html"
@@ -268,15 +267,15 @@
 					"file": "dashboard/index.php",
 					"settings":
 					{
-						"buffer_size": 3065,
+						"buffer_size": 3229,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1813,
-								1813
+								1455,
+								1455
 							]
 						],
 						"settings":
@@ -285,53 +284,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1120.0,
+						"translation.y": 1300.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "js/datalist-plugin.js",
-					"settings":
-					{
-						"buffer_size": 5948,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5714,
-								5714
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3240.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "js/bucket.js",
 					"settings":
 					{
-						"buffer_size": 160,
+						"buffer_size": 1005,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								160,
-								160
+								693,
+								693
 							]
 						],
 						"settings":
@@ -339,13 +310,13 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 160.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "css/global.css",
 					"settings":
 					{
@@ -372,7 +343,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "css/dashboard.css",
 					"settings":
 					{
@@ -399,7 +370,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "readme.md",
 					"settings":
 					{
@@ -425,7 +396,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "database.php",
 					"settings":
 					{
@@ -451,7 +422,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "dashboard/data/1815005076.json",
 					"settings":
 					{
@@ -462,8 +433,8 @@
 						"selection":
 						[
 							[
-								254,
-								254
+								89,
+								79
 							]
 						],
 						"settings":
