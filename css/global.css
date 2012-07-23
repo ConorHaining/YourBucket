@@ -1,7 +1,5 @@
-*{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+body{
+	background: #DBDBDB;
 }
 #wrapper{
 	margin: 0 auto;
@@ -10,7 +8,7 @@
 }
 header{
 	height: 150px;
-	background: blue;
+	background: #363636;
 }
 header.small{
 	height: 80px;
